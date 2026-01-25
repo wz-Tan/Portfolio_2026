@@ -4,11 +4,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 function App() {
   // Setting Hero Header
   const headers = [
-    "Student Developer.",
-    "Web and Mobile Development.",
-    "Part-Time Freelancer.",
+    "Student Developer",
+    "Web and Mobile Development",
+    "Part-Time Freelancer",
   ];
-  
+
   return (
     <main className="bg-zinc-900 w-full min-h-full zalando-sans tracking-tight  text-white">
       {/* Nav */}
@@ -23,9 +23,9 @@ function App() {
       </nav>
 
       {/* Main Container */}
-      <div className="p-2 w-full min-h-screen">
+      <div className="p-4 px-20 w-full min-h-screen">
         {/* Hero */}
-        <div className="w-full items-center justify-center flex flex-col h-screen">
+        <div className="w-full items-center justify-center flex flex-col min-h-screen">
           <ul className="text-8xl flex text-center justify-center font-semibold h-24 w-full relative">
             <li className="heroCaption absolute">{headers[0]}</li>
             <li className="heroCaption absolute">{headers[1]}</li>
@@ -41,6 +41,38 @@ function App() {
         </div>
 
         {/* About Section*/}
+        <div className="w-full flex flex-col min-h-screen">
+          <p className="text-4xl font-light">About Me</p>
+          <p className="leading-30 text-8xl font-semibold">Who Am I?</p>
+          <div className="p-4">
+            <p className="text-2xl font-light">
+              Hello! My name is Wen Zhe, or you could also call me Nathan. I
+              have been self-teaching myself all things programming since I was
+              18, which is in 2024. I started off by learning C++ since I
+              originally wanted to do Game Development. I eventually stumbled
+              across Leetcoding and SQL, although I had no idea what I was
+              really doing at that time. Anyway, I started to get better and
+              learn more technologies through opportunities like hackathons and
+              freelancing gigs. I have shifted between different technologies
+              and fields, looking for what works best for me. As of now, I have
+              more than a year's worth of experience working with various
+              technologies, notably in the Frontend and Mobile fields. But we'll
+              get a deeper dive into this later.
+            </p>
+          </div>
+
+          <div className="text-end mt-30">
+            <p className="leading-25 text-6xl font-semibold">
+              My Education Journey
+            </p>
+            <p className="text-2xl font-light">
+              I am currently a pursuing a Bachelor's Degree in Computer Science
+              at Sunway University, Malaysia.
+            </p>
+          </div>
+
+          {/* Education Timeline */}
+        </div>
       </div>
     </main>
   );

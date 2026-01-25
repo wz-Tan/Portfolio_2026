@@ -47,31 +47,86 @@ function App() {
           <div className="p-4">
             <p className="text-2xl font-light">
               Hello! My name is Wen Zhe, or you could also call me Nathan. I
-              have been self-teaching myself all things programming since I was
-              18, which is in 2024. I started off by learning C++ since I
-              originally wanted to do Game Development. I eventually stumbled
-              across Leetcoding and SQL, although I had no idea what I was
-              really doing at that time. Anyway, I started to get better and
-              learn more technologies through opportunities like hackathons and
-              freelancing gigs. I have shifted between different technologies
-              and fields, looking for what works best for me. As of now, I have
-              more than a year's worth of experience working with various
-              technologies, notably in the Frontend and Mobile fields. But we'll
-              get a deeper dive into this later.
+              have been self-teaching all things programming since I was 18,
+              which is in 2024. I started off by learning C++ since I originally
+              wanted to do Game Development. I eventually stumbled across
+              Leetcoding and SQL, although I had no idea what I was really doing
+              at that time. Anyway, I started to get better and learn more
+              technologies through opportunities like hackathons and freelancing
+              gigs. I have shifted between different technologies and fields,
+              looking for what works best for me. As of now, I have more than a
+              year's worth of experience working with various technologies,
+              notably in the Frontend and Mobile fields. But we'll get a deeper
+              dive into this later.
             </p>
           </div>
 
-          <div className="text-end mt-30">
-            <p className="leading-25 text-6xl font-semibold">
-              My Education Journey
-            </p>
-            <p className="text-2xl font-light">
-              I am currently a pursuing a Bachelor's Degree in Computer Science
-              at Sunway University, Malaysia.
-            </p>
+          <div className="text-start mt-10">
+            <p className="leading-30 text-6xl font-semibold">Education</p>
           </div>
 
           {/* Education Timeline */}
+          <div className="flex flex-wrap gap-10">
+            <div className="flex-1 border-x-2 border-white  flex flex-col p-4 rounded-2xl">
+              <h1 className="text-3xl font-semibold">Sunway University</h1>
+              <p className="leading-15 text-2xl font-medium">
+                Bachelor of Science (Honours) in Computer Science
+              </p>
+              <p className="leading-5 text-2xl font-light text-zinc-500">
+                September 2025 - September 2028
+              </p>
+            </div>
+
+            <div className="flex-1 border-x-2 border-white flex flex-col p-4 rounded-2xl">
+              <h1 className="text-3xl font-semibold">
+                Asia Pacific University of Technology and Innovation
+              </h1>
+              <p className="leading-15 text-2xl font-medium">
+                Foundation in Computing and Technology
+              </p>
+              <p className="leading-5 text-2xl font-light text-zinc-500">
+                July 2024 - May 2025
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-15">
+            <p className="leading-30 text-8xl font-semibold text-center">
+              My Passions
+            </p>
+            <p className="text-center text-4xl font-light">
+              There has to be more in life than coding, <em>right?</em>
+            </p>
+
+            {/* Aesthetic Container */}
+            <div className="flex flex-wrap gap-2.5 mt-8">
+              <div className="flex-2 flex flex-col gap-2">
+                <div className="rounded-md bg-zinc-800 p-4 px-6">
+                  <p className="text-3xl font-semibold">
+                    Music I've Been into Lately
+                  </p>
+                  <p className="leading-10 text-2xl font-light">
+                    Did I mention I got really into Indie these few months?
+                  </p>
+                  <div className="flex gap-8 mt-8">
+                    <div className="flex-1 rounded-md">
+                      <div className="w-full h-full">
+                        <img className="rounded-2xl" src="/malcolmTodd.png" />
+                      </div>
+                    </div>
+                    <div className="flex-1">Artist 2 </div>
+                    <div className="flex-1">Artist 3 </div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <div className="flex-1 rounded-md bg-zinc-800">Books</div>
+                  <div className="flex-1 rounded-md bg-zinc-800">Sports</div>
+                </div>
+              </div>
+
+              <div className="flex-1">Movies</div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

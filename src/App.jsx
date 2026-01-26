@@ -100,7 +100,7 @@ function App() {
 
             {/* Aesthetic Container */}
             <div className="flex flex-wrap gap-2.5 mt-8">
-              <div className="flex-2 flex flex-col gap-2">
+              <div className="flex-2 flex flex-col gap-3">
                 <div className="rounded-xl bg-zinc-800 p-4 px-6">
                   <p className="text-3xl font-semibold">
                     Artists I've Been into Lately
@@ -175,9 +175,53 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  <div className="flex-1 rounded-md bg-zinc-800">Books</div>
-                  <div className="flex-1 rounded-md bg-zinc-800">Sports</div>
+                {/* Books */}
+                <div className="rounded-md bg-zinc-800 p-4 px-6">
+                  <p className="text-3xl font-semibold ">I Love Reading</p>
+                  <p className="leading-10 text-2xl font-light">
+                    It makes me look educated too.
+                  </p>
+
+                  <div className="flex flex-row gap-4 mt-2">
+                    <div className="flex flex-col flex-1  text-center">
+                      <div className="w-full aspect-square">
+                        <img
+                          src="/psychologyOfmoney.jpg"
+                          className="w-full h-full rounded-xl object-cover"
+                        />
+                      </div>
+                      <p className="text-2xl font-semibold mt-2 leading-10">
+                        The Psychology of Money
+                      </p>
+                      <p className="text-2xl font-light">Morgan Housel</p>
+                    </div>
+
+                    <div className="flex  flex-col flex-1 text-center">
+                      <div className="w-full aspect-square">
+                        <img
+                          src="/artOfNotGivingAF.jpg"
+                          className="w-full h-full rounded-xl object-cover"
+                        />
+                      </div>
+                      <p className="text-2xl font-semibold mt-2 leading-10">
+                        The Art of Not Giving a F*ck
+                      </p>
+                      <p className="text-2xl font-light">Mark Manson</p>
+                    </div>
+
+                    <div className="flex flex-col flex-1 text-center">
+                      <div className="w-full aspect-square">
+                        <img
+                          src="/deepWork.jpeg"
+                          className="w-full h-full rounded-xl object-cover"
+                        />
+                      </div>
+                      <p className="text-2xl font-semibold mt-2 leading-10">
+                        Deep Work
+                      </p>
+                      <p className="text-2xl font-light">Cal Newport</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

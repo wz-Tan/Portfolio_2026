@@ -92,7 +92,7 @@ function App() {
 
           <div className="mt-15">
             <p className="leading-30 text-8xl font-semibold text-center">
-              My Passions
+              My Interests
             </p>
             <p className="text-center text-4xl font-light">
               There has to be more in life than coding, <em>right?</em>
@@ -101,21 +101,78 @@ function App() {
             {/* Aesthetic Container */}
             <div className="flex flex-wrap gap-2.5 mt-8">
               <div className="flex-2 flex flex-col gap-2">
-                <div className="rounded-md bg-zinc-800 p-4 px-6">
+                <div className="rounded-xl bg-zinc-800 p-4 px-6">
                   <p className="text-3xl font-semibold">
-                    Music I've Been into Lately
+                    Artists I've Been into Lately
                   </p>
                   <p className="leading-10 text-2xl font-light">
-                    Did I mention I got really into Indie these few months?
+                    I mainly listen to Indie, sometimes C-Pop or Hip Hop.
                   </p>
-                  <div className="flex gap-8 mt-8">
-                    <div className="flex-1 rounded-md">
-                      <div className="w-full h-full">
-                        <img className="rounded-2xl" src="/malcolmTodd.png" />
+
+                  <div className="flex gap-8 mt-2 flex-wrap">
+                    <div className="flex flex-col gap-5 flex-1">
+                      <div className="w-full aspect-square">
+                        <img
+                          className="rounded-md w-full h-full object-cover"
+                          src="/malcolmTodd.png"
+                        />
                       </div>
+
+                      <a
+                        href="https://open.spotify.com/artist/7eKkW1zo5uzW8kUntiiBvz?si=gs3p9TeMSeGtAjlY2cFyOg"
+                        target="_blank"
+                      >
+                        <div className="flex items-center justify-center gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                          <p className="text-2xl font-light">Malcolm Todd</p>
+                          <img
+                            className="w-12 aspect-square self-end"
+                            src="/spotify.svg"
+                          />
+                        </div>
+                      </a>
                     </div>
-                    <div className="flex-1">Artist 2 </div>
-                    <div className="flex-1">Artist 3 </div>
+                    <div className="flex flex-col gap-5 flex-1">
+                      <div className="w-full aspect-square">
+                        <img
+                          className="rounded-md w-full h-full object-cover"
+                          src="/menITrust.jpg"
+                        />
+                      </div>
+
+                      <a
+                        href="https://open.spotify.com/artist/3zmfs9cQwzJl575W1ZYXeT?si=wmDpwCzNTb6UzRF2d-nylQ"
+                        target="_blank"
+                      >
+                        <div className="flex items-center justify-center gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                          <p className="text-2xl font-light">Men I Trust</p>
+                          <img
+                            className="w-12 aspect-square self-end"
+                            src="/spotify.svg"
+                          />
+                        </div>
+                      </a>
+                    </div>
+                    <div className="flex flex-col gap-5 flex-1">
+                      <div className="w-full aspect-square">
+                        <img
+                          className="rounded-md w-full h-full object-cover"
+                          src="/oasis.jpg"
+                        />
+                      </div>
+
+                      <a
+                        href="https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4?si=x2lWVhKlSJSN4h4Lm49YdA"
+                        target="_blank"
+                      >
+                        <div className="flex items-center justify-center gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                          <p className="text-2xl font-light">Oasis</p>
+                          <img
+                            className="w-12 aspect-square self-end"
+                            src="/spotify.svg"
+                          />
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -124,7 +181,88 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex-1">Movies</div>
+              {/* Movies */}
+              <div className="rounded-xl bg-zinc-800 p-4 px-6 flex-1">
+                <p className="text-3xl font-semibold">Movies or TV Shows</p>
+                <p className="leading-10 text-2xl font-light">
+                  Films that made me reflect on myself.
+                </p>
+
+                <div className="flex flex-col mt-2 gap-8">
+                  <div className="flex flex-wrap gap-4">
+                    <div className="flex-1">
+                      <img
+                        src="/nge.jpeg"
+                        className="h-full w-full rounded-xl"
+                      />
+                    </div>
+                    <div className="flex-2 flex-col flex gap-2">
+                      <p className="text-3xl font-medium">
+                        Neon Genesis Evangelion
+                      </p>
+                      <p className="text-xl font-light leading-6 ">
+                        By deploying a few of high school teenagers to save the
+                        world, the series looks into how human interactions
+                        cause pain to one another with their own baggages.{" "}
+                        <br />
+                        <br />
+                        The core concept of the show is the Hedgehog's Dilemma,
+                        which states that humans hurt each other, yet the
+                        connections we make are worth the pain it brings.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4">
+                    <div className="flex-1">
+                      <img
+                        src="/500dos.jpg"
+                        className="h-full w-full rounded-xl"
+                      />
+                    </div>
+                    <div className="flex-2 flex-col flex gap-2">
+                      <p className="text-3xl font-medium">
+                        (500) Days of Summer
+                      </p>
+                      <p className="text-xl font-light leading-6 ">
+                        My favourite Rom-Com, though it's more of a horror
+                        movie. The film practically discusses a dysfunctional
+                        relationship between Summer who wasn't willing to
+                        commit, and Tom who wasn't willing to let go.
+                        <br />
+                        <br />
+                        We all see things that we want to see. We should learn
+                        to gauge things and people as a whole, rather than only
+                        the parts that serve us.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4">
+                    <div className="flex-1">
+                      <img
+                        src="/houseMd.jpg"
+                        className="h-full w-full rounded-xl"
+                      />
+                    </div>
+                    <div className="flex-2 flex-col flex gap-2">
+                      <p className="text-3xl font-medium">House M.D.</p>
+                      <p className="text-xl font-light leading-6 ">
+                        House M.D. is a show that explores the life of Dr.
+                        House, who is a Vicodin addict and struggles with
+                        interpersonal relationships due to a fear of
+                        vulnerability.
+                        <br />
+                        <br />
+                        Though the humour in the show was amazing, the show was
+                        carried by superb acting by the cast. Problems don't go
+                        away just because we ignore them, instead they manifest
+                        in other areas of life.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

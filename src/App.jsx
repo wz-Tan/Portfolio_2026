@@ -33,13 +33,15 @@ import {
   SiFlutter,
   SiExpo,
   SiVite,
-  SiRubysinatra,
+  SiGooglegemini,
+  SiGooglemaps,
+  SiJsonwebtokens,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandFramerMotion, TbBrandReactNative } from "react-icons/tb";
 import { PiDeviceMobileSpeakerLight } from "react-icons/pi";
 import { FiLink } from "react-icons/fi";
-import { FaCubes } from "react-icons/fa";
+import { FaCubes, FaDatabase } from "react-icons/fa";
 import { CiDroplet } from "react-icons/ci";
 import { GrCubes } from "react-icons/gr";
 
@@ -85,6 +87,7 @@ function App() {
     [<SiVite />, "Vite"],
     [<SiExpress />, "ExpressJS"],
     [<SiNodedotjs />, "NodeJS"],
+    [<SiJsonwebtokens />, "JSON Web Token"],
     [<SiTailwindcss />, "TailwindCSS"],
     [<SiFirebase />, "Firebase"],
     [<SiSupabase />, "Supabase"],
@@ -113,6 +116,28 @@ function App() {
     [<CiDroplet />, "Sui Move"],
     [<SiVercel />, "Vercel"],
     [<GrCubes />, "Web3"],
+    [<SiVite />, "Vite"],
+  ];
+
+  const kitalearn = [
+    [<SiFlutter />, "Flutter"],
+    [<SiFirebase />, "Firebase"],
+    [<SiGooglegemini />, "Google Gemini API"],
+  ];
+
+  const wakemeup = [
+    [<TbBrandReactNative />, "React Native"],
+    [<SiExpo />, "Expo"],
+    [<SiExpress />, "ExpressJS"],
+    [<SiNodedotjs />, "NodeJS"],
+    [<SiJsonwebtokens />, "JSON Web Token"],
+    [<FaDatabase />, "NeonDB"],
+    [<SiGooglemaps />, "Google Maps API"],
+  ];
+
+  const portfolio = [
+    [<SiReact />, "ReactJS"],
+    [<SiTailwindcss />, "TailwindCSS"],
     [<SiVite />, "Vite"],
   ];
 
@@ -607,6 +632,128 @@ function App() {
                 </p>
                 <div className="flex flex-wrap gap-2 items-start mt-auto">
                   {suiRankup.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            {/* Third Project */}
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+              <div className="flex-1 aspect-video">
+                <img
+                  src="/kitalearn.png"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="flex flex-col flex-3">
+                <div className="flex flex-row text-3xl items-center gap-4">
+                  <h1 className="leading-15 font-semibold">KitaLearn</h1>
+
+                  <a
+                    className="text-2xl"
+                    href="https://github.com/wz-Tan/kitahack_hackathon"
+                    target="_blank"
+                  >
+                    <SiGithub />
+                  </a>
+                </div>
+
+                <p className="text-2xl font-light">
+                  KitaLearn is a project I did for KitaHack 2025, hosted by
+                  Google Developer Groups on Campus (GDGOC) Malaysia. I targeted
+                  the quality education track for this project. Essentially,
+                  KitaLearn is a Flutter app that allows users to learn math by
+                  generating a relevant syllabus based on the user's age and
+                  country via Gemini API.
+                </p>
+                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                  {kitalearn.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Fourth Project */}
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+              <div className="flex-1 aspect-video">
+                <img
+                  src="/wakeMeUp.png"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="flex flex-col flex-3">
+                <div className="flex flex-row text-3xl items-center gap-4">
+                  <h1 className="leading-15 font-semibold">WakeMeUp</h1>
+
+                  <a
+                    className="text-2xl"
+                    href="https://github.com/wz-Tan/WakeMeUp"
+                    target="_blank"
+                  >
+                    <SiGithub />
+                  </a>
+                </div>
+
+                <p className="text-2xl font-light">
+                  Location-based alarm written in React Native. Inspiration came
+                  from one time I overslept my stop. Provided a great experience
+                  for working with backend development and mobile UI design.
+                </p>
+                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                  {wakemeup.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Fifth Project */}
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+              <div className="flex-1 aspect-video">
+                <img
+                  src="/portfolio.png"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="flex flex-col flex-3">
+                <div className="flex flex-row text-3xl items-center gap-4">
+                  <h1 className="leading-15 font-semibold">
+                    Portfolio Website
+                  </h1>
+
+                  <a
+                    className="text-2xl"
+                    href="https://github.com/wz-Tan/Portfolio_2026"
+                    target="_blank"
+                  >
+                    <SiGithub />
+                  </a>
+                </div>
+
+                <p className="text-2xl font-light">
+                  ...The website you're looking at right now :D
+                </p>
+                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                  {portfolio.map((v, k) => (
                     <div
                       key={k}
                       className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"

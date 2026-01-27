@@ -1,3 +1,4 @@
+import { MdWeb } from "react-icons/md";
 import "./App.css";
 import { FaArrowRightLong, FaCode, FaLinux, FaWindows } from "react-icons/fa6";
 import { RiToolsLine } from "react-icons/ri";
@@ -20,8 +21,27 @@ import {
   SiCanva,
   SiVercel,
   SiCloudflare,
+  SiReact,
+  SiNextdotjs,
+  SiExpress,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiFirebase,
+  SiSupabase,
+  SiMongodb,
+  SiJetpackcompose,
+  SiFlutter,
+  SiExpo,
+  SiVite,
+  SiRubysinatra,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import { TbBrandFramerMotion, TbBrandReactNative } from "react-icons/tb";
+import { PiDeviceMobileSpeakerLight } from "react-icons/pi";
+import { FiLink } from "react-icons/fi";
+import { FaCubes } from "react-icons/fa";
+import { CiDroplet } from "react-icons/ci";
+import { GrCubes } from "react-icons/gr";
 
 function App() {
   // Setting Hero Header
@@ -39,6 +59,7 @@ function App() {
     [<SiDart />, "Dart"],
     [<SiHtml5 />, "HTML"],
     [<SiCss3 />, "CSS"],
+    [<FaCubes />, "VBA"],
     [<SiCplusplus />, "C++"],
     [<SiMysql />, "MySQL"],
   ];
@@ -56,6 +77,43 @@ function App() {
     [<SiCanva />, "Canva"],
     [<SiVercel />, "Vercel"],
     [<SiCloudflare />, "Cloudflare"],
+  ];
+
+  const web = [
+    [<SiReact />, "ReactJS"],
+    [<SiNextdotjs />, "NextJS"],
+    [<SiVite />, "Vite"],
+    [<SiExpress />, "ExpressJS"],
+    [<SiNodedotjs />, "NodeJS"],
+    [<SiTailwindcss />, "TailwindCSS"],
+    [<SiFirebase />, "Firebase"],
+    [<SiSupabase />, "Supabase"],
+    [<SiMongodb />, "MongoDB"],
+  ];
+
+  const mobile = [
+    [<TbBrandReactNative />, "React Native"],
+    [<SiJetpackcompose />, "Jetpack Compose"],
+    [<SiFlutter />, "Flutter"],
+    [<SiExpo />, "Expo"],
+  ];
+
+  const eduserve = [
+    [<SiReact />, "ReactJS"],
+    [<SiVite />, "Vite"],
+    [<SiTailwindcss />, "TailwindCSS"],
+    [<TbBrandFramerMotion />, "Framer Motion"],
+    [<SiHtml5 />, "HTML"],
+    [<SiCss3 />, "CSS"],
+  ];
+
+  const suiRankup = [
+    [<SiReact />, "ReactJS"],
+    [<SiTailwindcss />, "TailwindCSS"],
+    [<CiDroplet />, "Sui Move"],
+    [<SiVercel />, "Vercel"],
+    [<GrCubes />, "Web3"],
+    [<SiVite />, "Vite"],
   ];
 
   return (
@@ -116,7 +174,7 @@ function App() {
 
           {/* Education Timeline */}
           <div className="flex flex-wrap gap-10">
-            <div className="flex-1 border-x-2 border-white  flex flex-col p-4 rounded-2xl">
+            <div className="flex-1 border-x-2 border-white  flex flex-col p-4 rounded-2xl hover:border-zinc-600 transition-colors ease-in-out duration-100">
               <h1 className="text-3xl font-semibold">Sunway University</h1>
               <p className="leading-15 text-2xl font-medium">
                 Bachelor of Science (Honours) in Computer Science
@@ -126,7 +184,7 @@ function App() {
               </p>
             </div>
 
-            <div className="flex-1 border-x-2 border-white flex flex-col p-4 rounded-2xl">
+            <div className="flex-1 border-x-2 border-white flex flex-col p-4 rounded-2xl  hover:border-zinc-600 transition-colors ease-in-out duration-100">
               <h1 className="text-3xl font-semibold">
                 Asia Pacific University of Technology and Innovation
               </h1>
@@ -367,11 +425,13 @@ function App() {
           <p className="p-4 text-2xl font-light">
             My projects are a mix between hobby projects as well as hackathon
             prototypes. In this section, I'll cover the work I've done, tools,
-            languages and frameworks I have experience with.
+            languages and frameworks I have experience with. I have dabbled in
+            web and mobile app development for the most part, but I'm planning
+            to look into AI frameworks such as PyTorch and Scikit-Learn soon.
           </p>
           {/* Container */}
-          <div className="flex flex-col flex-wrap mt-5 px-4">
-            <div className="flex flex-row flex-wrap gap-2">
+          <div className="flex flex-col flex-wrap mt-5 px-4 gap-3">
+            <div className="flex flex-1 flex-row flex-wrap gap-2">
               <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
                 <div className="flex items-center gap-4">
                   <FaCode className="text-4xl" />
@@ -384,7 +444,7 @@ function App() {
                   {languages.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit"
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
                     >
                       <p className="text-lg ">{v[0]}</p>
                       <p className="text-lg font-light ">{v[1]}</p>
@@ -400,6 +460,153 @@ function App() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {tools.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Second Row */}
+            <div className="flex-1 flex flex-row flex-wrap gap-2">
+              <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
+                <div className="flex items-center gap-4">
+                  <MdWeb className="text-4xl" />
+                  <h1 className="leading-10 text-4xl font-semibold">
+                    Web Development
+                  </h1>
+                </div>
+                {/* Language Containers */}
+                <div className="flex flex-wrap gap-2 items-start">
+                  {web.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
+                <div className="flex items-center gap-4">
+                  <PiDeviceMobileSpeakerLight className="text-4xl" />
+                  <h1 className="leading-10 text-4xl font-semibold">
+                    Mobile App Development
+                  </h1>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {mobile.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Projects */}
+          <div className="mt-15">
+            <p className="leading-30 text-8xl font-semibold text-center">
+              Work I've Done
+            </p>
+            <p className="text-center text-4xl font-light">
+              My Projects So Far
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center mt-10 gap-4">
+            {/* First Project */}
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+              <div className="flex-1 aspect-video">
+                <img
+                  src="/mecaEduserve.png"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="flex flex-col flex-3">
+                <div className="flex flex-row text-3xl items-center gap-4">
+                  <h1 className="leading-15 font-semibold">
+                    EduServe Business Website
+                  </h1>
+                  <a
+                    className="text-2xl"
+                    href="https://meca-eduserve.com/"
+                    target="_blank"
+                  >
+                    <FiLink />
+                  </a>
+                </div>
+
+                <p className="text-2xl font-light">
+                  My first freelance work for a friend. Developed the website
+                  based off Figma draft given by the designer. Responsive
+                  website aimed to increase business outreach and build brand
+                  image.
+                </p>
+                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                  {eduserve.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Second Project */}
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+              <div className="flex-1 aspect-video">
+                <img
+                  src="/suiRankup.png"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="flex flex-col flex-3">
+                <div className="flex flex-row text-3xl items-center gap-4">
+                  <h1 className="leading-15 font-semibold">Sui RankUp</h1>
+                  <a
+                    className="text-2xl"
+                    href="https://devmatch2-ch1ll-guys-prod.vercel.app/marketplace"
+                    target="_blank"
+                  >
+                    <FiLink />
+                  </a>
+                  <a
+                    className="text-2xl"
+                    href="https://github.com/wz-Tan/devmatch2_Ch1llGuys"
+                    target="_blank"
+                  >
+                    <SiGithub />
+                  </a>
+                </div>
+
+                <p className="text-2xl font-light">
+                  Web3-Integrated project for DevMatch 2025. An on-chain (SUI)
+                  marketplace that levels up assets on NFT purchases and sales.
+                  I wrote the smart contracts and integrated the endpoints with
+                  the front-end written by my teammates. The website also
+                  supports connecting with Slush wallets and minting your own
+                  NFTs. My favourite hackathon yet.
+                </p>
+                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                  {suiRankup.map((v, k) => (
                     <div
                       key={k}
                       className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"

@@ -1,5 +1,27 @@
 import "./App.css";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaCode, FaLinux, FaWindows } from "react-icons/fa6";
+import { RiToolsLine } from "react-icons/ri";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiKotlin,
+  SiPython,
+  SiDart,
+  SiHtml5,
+  SiCss3,
+  SiCplusplus,
+  SiMysql,
+  SiPostman,
+  SiAndroidstudio,
+  SiZedindustries,
+  SiGit,
+  SiGithub,
+  SiFigma,
+  SiCanva,
+  SiVercel,
+  SiCloudflare,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 function App() {
   // Setting Hero Header
@@ -7,6 +29,33 @@ function App() {
     "Student Developer",
     "Web and Mobile Development",
     "Part-Time Freelancer",
+  ];
+
+  const languages = [
+    [<SiJavascript />, "Javascript"],
+    [<SiTypescript />, "Typescript"],
+    [<SiKotlin />, "Kotlin"],
+    [<SiPython />, "Python"],
+    [<SiDart />, "Dart"],
+    [<SiHtml5 />, "HTML"],
+    [<SiCss3 />, "CSS"],
+    [<SiCplusplus />, "C++"],
+    [<SiMysql />, "MySQL"],
+  ];
+
+  const tools = [
+    [<FaLinux />, "Linux"],
+    [<FaWindows />, "Windows"],
+    [<SiPostman />, "Postman"],
+    [<SiAndroidstudio />, "Android Studio"],
+    [<VscVscode />, "VS Code"],
+    [<SiZedindustries />, "Zed"],
+    [<SiGit />, "Git"],
+    [<SiGithub />, "GitHub"],
+    [<SiFigma />, "Figma"],
+    [<SiCanva />, "Canva"],
+    [<SiVercel />, "Vercel"],
+    [<SiCloudflare />, "Cloudflare"],
   ];
 
   return (
@@ -305,6 +354,60 @@ function App() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Projects */}
+
+        <div className="w-full flex flex-col mt-15 min-h-screen">
+          <p className="text-4xl font-light">Experiences</p>
+          <p className="leading-30 text-8xl font-semibold">Technical Skills</p>
+          <p className="p-4 text-2xl font-light">
+            My projects are a mix between hobby projects as well as hackathon
+            prototypes. In this section, I'll cover the work I've done, tools,
+            languages and frameworks I have experience with.
+          </p>
+          {/* Container */}
+          <div className="flex flex-col flex-wrap mt-5 px-4">
+            <div className="flex flex-row flex-wrap gap-2">
+              <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
+                <div className="flex items-center gap-4">
+                  <FaCode className="text-4xl" />
+                  <h1 className="leading-10 text-4xl font-semibold">
+                    Languages
+                  </h1>
+                </div>
+                {/* Language Containers */}
+                <div className="flex flex-wrap gap-2 items-start">
+                  {languages.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
+                <div className="flex items-center gap-4">
+                  <RiToolsLine className="text-4xl" />
+                  <h1 className="leading-10 text-4xl font-semibold">Tools</h1>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {tools.map((v, k) => (
+                    <div
+                      key={k}
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                    >
+                      <p className="text-lg ">{v[0]}</p>
+                      <p className="text-lg font-light ">{v[1]}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

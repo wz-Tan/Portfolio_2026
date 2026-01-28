@@ -38,12 +38,14 @@ import {
   SiGooglemaps,
   SiJsonwebtokens,
   SiNpm,
+  SiLinkedin,
+  SiGmail,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandFramerMotion, TbBrandReactNative } from "react-icons/tb";
 import { PiDeviceMobileSpeakerLight } from "react-icons/pi";
 import { FiLink } from "react-icons/fi";
-import { FaCubes, FaDatabase } from "react-icons/fa";
+import { FaCubes, FaDatabase, FaRegCopyright } from "react-icons/fa";
 import { CiDroplet } from "react-icons/ci";
 import { GrCubes } from "react-icons/gr";
 import { AiOutlineSend } from "react-icons/ai";
@@ -176,7 +178,7 @@ function App() {
       if (response.status == 200) {
         setContactButtonMessage(["Message Sent", <TiTick />]);
       }
-    } catch (err) {
+    } catch (_) {
       setContactButtonMessage(["Try Again", <RxCross1 />]);
     }
 
@@ -192,30 +194,85 @@ function App() {
     message.value = "";
   }
 
+  // Scroll Behaviour
+  function scrollToHero() {
+    document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
+  }
+
+  function scrollToAbout() {
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+  }
+
+  function scrollToSkills() {
+    document.getElementById("skills").scrollIntoView({ behavior: "smooth" });
+  }
+
+  function scrollToProjects() {
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+  }
+
+  function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
-    <main className="bg-zinc-900 w-full min-h-full zalando-sans tracking-tight  text-white">
+    <main className="bg-zinc-900 w-screen overflow-clip min-h-full zalando-sans tracking-tight  text-white">
       {/* Nav */}
       <nav className="w-full p-8 px-50 flex justify-between text-2xl absolute top-0 ">
         <p className="text-3xl font-semibold">Tan Wen Zhe</p>
         <ul className="flex gap-4 font-light">
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact Me</li>
+          <li>
+            <button
+              className="hover:cursor-pointer"
+              onClick={() => scrollToAbout()}
+            >
+              About
+            </button>
+          </li>
+          <li>
+            <button
+              className="hover:cursor-pointer"
+              onClick={() => scrollToSkills()}
+            >
+              Skills
+            </button>
+          </li>
+          <li>
+            <button
+              className="hover:cursor-pointer"
+              onClick={() => scrollToProjects()}
+            >
+              Projects
+            </button>
+          </li>
+          <li>
+            <button
+              className="hover:cursor-pointer"
+              onClick={() => scrollToContact()}
+            >
+              Contact Me
+            </button>
+          </li>
         </ul>
       </nav>
 
       {/* Main Container */}
       <div className="p-4 px-20 w-full min-h-screen">
         {/* Hero */}
-        <div className="w-full items-center justify-center flex flex-col min-h-screen">
+        <div
+          id="hero"
+          className="w-full items-center justify-center flex flex-col min-h-screen"
+        >
           <ul className="text-8xl flex text-center justify-center font-semibold h-24 w-full relative">
             <li className="heroCaption absolute">{headers[0]}</li>
             <li className="heroCaption absolute">{headers[1]}</li>
             <li className="heroCaption absolute">{headers[2]}</li>
           </ul>
           <p className="leading-20 text-4xl text-zinc-500">Hi, I am Wen Zhe.</p>
-          <button className="group flex items-center gap-4 mt-2 rounded-4xl py-2 pl-6 bg-zinc-800 text-2xl transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out">
+          <button
+            onClick={() => scrollToAbout()}
+            className="group flex items-center gap-4 mt-2 rounded-4xl py-2 pl-6 bg-zinc-800 text-2xl transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out"
+          >
             <p>Let's Go</p>
             <div className="text-xl p-2 rounded-4xl bg-white text-black self-end heroButton">
               <FaArrowRightLong />
@@ -224,7 +281,7 @@ function App() {
         </div>
 
         {/* About Section*/}
-        <div className="w-full flex flex-col min-h-screen">
+        <div className="w-full flex flex-col min-h-screen" id="about">
           <p className="text-4xl font-light">About Me</p>
           <p className="leading-30 text-8xl font-semibold">Who Am I?</p>
           <div className="p-4">
@@ -495,7 +552,7 @@ function App() {
         </div>
         {/* Projects */}
 
-        <div className="w-full flex flex-col mt-15 min-h-screen">
+        <div className="w-full flex flex-col mt-15 min-h-screen" id="skills">
           <p className="text-4xl font-light">Experiences</p>
           <p className="leading-30 text-8xl font-semibold">Technical Skills</p>
           <p className="p-4 text-2xl font-light">
@@ -594,7 +651,7 @@ function App() {
           </div>
 
           {/* Projects */}
-          <div className="mt-15">
+          <div className="mt-15" id="projects">
             <p className="leading-30 text-8xl font-semibold text-center">
               Work I've Done
             </p>
@@ -605,7 +662,7 @@ function App() {
 
           <div className="flex flex-col items-center mt-10 gap-4">
             {/* First Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/mecaEduserve.png"
@@ -647,7 +704,7 @@ function App() {
             </div>
 
             {/* Second Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/suiRankup.png"
@@ -695,7 +752,7 @@ function App() {
               </div>
             </div>
             {/* Third Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/kitalearn.png"
@@ -738,7 +795,7 @@ function App() {
             </div>
 
             {/* Fourth Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/wakeMeUp.png"
@@ -778,7 +835,7 @@ function App() {
             </div>
 
             {/* Fifth Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/portfolio.png"
@@ -819,7 +876,7 @@ function App() {
           </div>
         </div>
         {/* Contact Me */}
-        <div className="w-full flex flex-col min-h-screen mt-20">
+        <div id="contact" className="w-full flex flex-col h-fit mt-20">
           <p className="text-4xl font-light">Contact Me</p>
           <p className="leading-30 text-8xl font-semibold">Let's Talk!</p>
           <p className="p-2 text-2xl font-light">
@@ -885,7 +942,7 @@ function App() {
 
             <button
               disabled={contactButtonDisabled}
-              className="w-fit flex mt-4 items-center text-zinc-200 justify-center gap-4 self-center border-zinc-400 border-2 rounded-4xl p-2 px-6 text-center transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out"
+              className="w-fit flex mt-4 items-center text-zinc-200 justify-center gap-4 self-center border-zinc-400 border-2 rounded-4xl p-2 px-6 text-center transition-colors hover:cursor-pointer hover:text-black hover:bg-slate-200 duration-150 ease-in-out"
             >
               <p className="text-2xl font-light">{contactButtonMessage[0]}</p>
               <p className="text-2xl">{contactButtonMessage[1]}</p>
@@ -893,7 +950,33 @@ function App() {
           </form>
 
           {/* Footer */}
-          <div></div>
+          <div className="flex items-center px-4 mt-30 mb-10">
+            <div className="flex-1 flex flex-row gap-4 text-4xl">
+              <a href="https://github.com/wz-Tan" target="_blank">
+                <SiGithub />
+              </a>
+              <a href="www.linkedin.com/in/wen-zhe-tan" target="_blank">
+                <SiLinkedin />
+              </a>
+              <a target="_blank" href="mailto:wztan.dev@gmail.com">
+                <SiGmail />
+              </a>
+            </div>
+
+            <button
+              className="flex-1 hover:cursor-pointer"
+              onClick={() => scrollToHero()}
+            >
+              <p className="text-3xl font-light text-center text-zinc-600">
+                Back to Top
+              </p>
+            </button>
+
+            <div className="flex-1 flex flex-row gap-4 text-4xl justify-end items-center">
+              <FaRegCopyright />
+              <p className="font-semibold">Tan Wen Zhe, 2026</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>

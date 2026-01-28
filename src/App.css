@@ -9,6 +9,10 @@
     font-variation-settings: "wdth" 100;
 }
 
+div {
+    scroll-behavior: smooth;
+}
+
 /* Hero */
 @keyframes rotate360 {
     0% {
@@ -63,4 +67,3 @@
 .heroCaption:nth-child(3) {
     animation-delay: 10s;
 }
-

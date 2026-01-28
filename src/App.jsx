@@ -219,7 +219,9 @@ function App() {
     <main className="bg-zinc-900 w-screen overflow-clip min-h-full zalando-sans tracking-tight  text-white">
       {/* Nav */}
       <nav className="w-full p-8 px-50 flex justify-between text-2xl absolute top-0 ">
-        <p className="text-3xl font-semibold">Tan Wen Zhe</p>
+        <button className="hover:cursor-pointer" onClick={() => scrollToHero()}>
+          <p className="text-3xl font-semibold">Tan Wen Zhe</p>
+        </button>
         <ul className="flex gap-4 font-light">
           <li>
             <button

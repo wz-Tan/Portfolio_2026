@@ -1,5 +1,6 @@
 import { MdWeb } from "react-icons/md";
 import "./App.css";
+import emailjs from "@emailjs/browser";
 import { FaArrowRightLong, FaCode, FaLinux, FaWindows } from "react-icons/fa6";
 import { RiToolsLine } from "react-icons/ri";
 import {
@@ -36,6 +37,7 @@ import {
   SiGooglegemini,
   SiGooglemaps,
   SiJsonwebtokens,
+  SiNpm,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandFramerMotion, TbBrandReactNative } from "react-icons/tb";
@@ -44,6 +46,11 @@ import { FiLink } from "react-icons/fi";
 import { FaCubes, FaDatabase } from "react-icons/fa";
 import { CiDroplet } from "react-icons/ci";
 import { GrCubes } from "react-icons/gr";
+import { AiOutlineSend } from "react-icons/ai";
+import { useState } from "react";
+import { LiaSpinnerSolid } from "react-icons/lia";
+import { TiTick } from "react-icons/ti";
+import { RxCross1 } from "react-icons/rx";
 
 function App() {
   // Setting Hero Header
@@ -75,6 +82,7 @@ function App() {
     [<SiZedindustries />, "Zed"],
     [<SiGit />, "Git"],
     [<SiGithub />, "GitHub"],
+    [<SiNpm />, "NPM"],
     [<SiFigma />, "Figma"],
     [<SiCanva />, "Canva"],
     [<SiVercel />, "Vercel"],
@@ -141,6 +149,49 @@ function App() {
     [<SiVite />, "Vite"],
   ];
 
+  const [contactButtonMessage, setContactButtonMessage] = useState([
+    "Drop A Message",
+    <AiOutlineSend />,
+  ]);
+
+  const [contactButtonDisabled, setContactButtonDisabled] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setContactButtonDisabled(true);
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICEID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLICKEY;
+
+    setContactButtonMessage(["Sending Message ...", <></>]);
+
+    // Automate Email
+    try {
+      emailjs.init({ publicKey: publicKey });
+      let response = await emailjs.sendForm(serviceID, templateID, e.target);
+      if (response.status == 200) {
+        setContactButtonMessage(["Message Sent", <TiTick />]);
+      }
+    } catch (err) {
+      setContactButtonMessage(["Try Again", <RxCross1 />]);
+    }
+
+    setTimeout(() => {
+      setContactButtonMessage(["Drop A Message", <AiOutlineSend />]);
+    }, 500);
+
+    setContactButtonDisabled(false);
+
+    // Reset Fields
+    name.value = "";
+    email.value = "";
+    message.value = "";
+  }
+
   return (
     <main className="bg-zinc-900 w-full min-h-full zalando-sans tracking-tight  text-white">
       {/* Nav */}
@@ -189,7 +240,7 @@ function App() {
               looking for what works best for me. As of now, I have more than a
               year's worth of experience working with various technologies,
               notably in the Frontend and Mobile fields. But we'll get a deeper
-              dive into this later.
+              dive into this later. I am also Malaysian.
             </p>
           </div>
 
@@ -775,7 +826,12 @@ function App() {
             I'm open to freelance work as well as job opportunities.
           </p>
 
-          <form className="flex flex-col  p-2 rounded-xl mt-2 h-fit gap-4">
+          <form
+            onSubmit={(e) => {
+              handleSubmit(e);
+            }}
+            className="flex flex-col  p-2 rounded-xl mt-2 h-fit gap-4"
+          >
             <div className="flex flex-col gap-2">
               <label
                 className="leading-10 text-2xl font-semibold"
@@ -784,8 +840,9 @@ function App() {
                 Your Name
               </label>
               <input
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg font-light focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-2xl font-light focus:outline-none focus:border-zinc-400"
                 id="name"
+                name="name"
                 type="text"
                 placeholder="What should I call you?"
                 required
@@ -800,8 +857,9 @@ function App() {
                 Your Email
               </label>
               <input
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg font-light  focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-2xl font-light  focus:outline-none focus:border-zinc-400"
                 id="email"
+                name="email"
                 type="email"
                 placeholder="What's your email address?"
                 required
@@ -817,17 +875,25 @@ function App() {
               </label>
               <textarea
                 id="message"
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg font-light  focus:outline-none focus:border-zinc-400"
+                name="message"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-2xl font-light  focus:outline-none focus:border-zinc-400"
                 rows={4}
                 placeholder="What's up?"
                 required
               ></textarea>
             </div>
 
-            <button classname="flex items-center gap-4 mt-2 rounded-4xl py-2 pl-6 bg-zinc-800 text-2xl transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out">
-              <p>Drop A Message</p>
+            <button
+              disabled={contactButtonDisabled}
+              className="w-fit flex mt-4 items-center text-zinc-200 justify-center gap-4 self-center border-zinc-400 border-2 rounded-4xl p-2 px-6 text-center transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out"
+            >
+              <p className="text-2xl font-light">{contactButtonMessage[0]}</p>
+              <p className="text-2xl">{contactButtonMessage[1]}</p>
             </button>
           </form>
+
+          {/* Footer */}
+          <div></div>
         </div>
       </div>
     </main>

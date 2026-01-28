@@ -144,12 +144,12 @@ function App() {
   return (
     <main className="bg-zinc-900 w-full min-h-full zalando-sans tracking-tight  text-white">
       {/* Nav */}
-      <nav className="w-full p-8 px-50 flex justify-between text-2xl absolute top-0">
+      <nav className="w-full p-8 px-50 flex justify-between text-2xl absolute top-0 ">
         <p className="text-3xl font-semibold">Tan Wen Zhe</p>
         <ul className="flex gap-4 font-light">
           <li>About</li>
-          <li>Projects</li>
           <li>Skills</li>
+          <li>Projects</li>
           <li>Contact Me</li>
         </ul>
       </nav>
@@ -766,6 +766,68 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+        {/* Contact Me */}
+        <div className="w-full flex flex-col min-h-screen mt-20">
+          <p className="text-4xl font-light">Contact Me</p>
+          <p className="leading-30 text-8xl font-semibold">Let's Talk!</p>
+          <p className="p-2 text-2xl font-light">
+            I'm open to freelance work as well as job opportunities.
+          </p>
+
+          <form className="flex flex-col  p-2 rounded-xl mt-2 h-fit gap-4">
+            <div className="flex flex-col gap-2">
+              <label
+                className="leading-10 text-2xl font-semibold"
+                htmlFor="name"
+              >
+                Your Name
+              </label>
+              <input
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg font-light focus:outline-none focus:border-zinc-400"
+                id="name"
+                type="text"
+                placeholder="What should I call you?"
+                required
+              ></input>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label
+                className="leading-10 text-2xl font-semibold"
+                htmlFor="email"
+              >
+                Your Email
+              </label>
+              <input
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg font-light  focus:outline-none focus:border-zinc-400"
+                id="email"
+                type="email"
+                placeholder="What's your email address?"
+                required
+              ></input>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label
+                className="leading-10 text-2xl font-semibold"
+                htmlFor="message"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg font-light  focus:outline-none focus:border-zinc-400"
+                rows={4}
+                placeholder="What's up?"
+                required
+              ></textarea>
+            </div>
+
+            <button classname="flex items-center gap-4 mt-2 rounded-4xl py-2 pl-6 bg-zinc-800 text-2xl transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out">
+              <p>Drop A Message</p>
+            </button>
+          </form>
         </div>
       </div>
     </main>

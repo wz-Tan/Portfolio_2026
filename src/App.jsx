@@ -718,7 +718,7 @@ function App() {
                   <h1 className="leading-15 font-semibold">Sui RankUp</h1>
                   <a
                     className="text-2xl"
-                    href="https://devmatch2-ch1ll-guys-prod.vercel.app/marketplace"
+                    href="https://devmatch2-ch1ll-guys-prod.vercel.app/"
                     target="_blank"
                   >
                     <FiLink />

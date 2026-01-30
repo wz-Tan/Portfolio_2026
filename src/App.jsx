@@ -58,7 +58,7 @@ function App() {
   // Setting Hero Header
   const headers = [
     "Student Developer",
-    "Web and Mobile Development",
+    "Web and Mobile Developer",
     "Part-Time Freelancer",
   ];
 
@@ -216,13 +216,16 @@ function App() {
   }
 
   return (
-    <main className="bg-zinc-900 w-screen overflow-clip min-h-full zalando-sans tracking-tight  text-white">
+    <main className="bg-zinc-900 w-screen overflow-clip min-h-full zalando-sans tracking-tight text-white ">
       {/* Nav */}
-      <nav className="w-full p-8 px-50 flex justify-between text-2xl absolute top-0 ">
-        <button className="hover:cursor-pointer" onClick={() => scrollToHero()}>
+      <nav className="w-full p-8 md:px-50 flex flex-col lg:flex-row items-center lg:justify-between text-xl md:text-2xl absolute top-0 ">
+        <button
+          className="hidden md:block hover:cursor-pointer"
+          onClick={() => scrollToHero()}
+        >
           <p className="text-3xl font-semibold">Tan Wen Zhe</p>
         </button>
-        <ul className="flex gap-4 font-light">
+        <ul className="flex flex-col items-center gap-2 md:gap-4 md:flex-row font-light ">
           <li>
             <button
               className="hover:cursor-pointer"
@@ -265,15 +268,21 @@ function App() {
           id="hero"
           className="w-full items-center justify-center flex flex-col min-h-screen"
         >
-          <ul className="text-8xl flex text-center justify-center font-semibold h-24 w-full relative">
-            <li className="heroCaption absolute">{headers[0]}</li>
-            <li className="heroCaption absolute">{headers[1]}</li>
-            <li className="heroCaption absolute">{headers[2]}</li>
+          <ul className="text-4xl md:text-6xl lg:text-8xl flex text-center justify-center font-semibold h-12 md:h-18 lg:h-24 relative w-full">
+            <li className="heroCaption absolute md:top-0">{headers[0]}</li>
+            <li className="heroCaption absolute -top-10 sm:top-0">
+              {headers[1]}
+            </li>
+            <li className="heroCaption absolute -top-10 sm:top-0">
+              {headers[2]}
+            </li>
           </ul>
-          <p className="leading-20 text-4xl text-zinc-500">Hi, I am Wen Zhe.</p>
+          <p className="leading-5 md:leading-10 lg:leading-20 text-xl md:text-2xl lg:text-4xl text-zinc-500">
+            Hi, I am Wen Zhe.
+          </p>
           <button
             onClick={() => scrollToAbout()}
-            className="group flex items-center gap-4 mt-2 rounded-4xl py-2 pl-6 bg-zinc-800 text-2xl transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out"
+            className="group flex items-center gap-4 mt-4 rounded-4xl py-1 md:py-2 pl-6 bg-zinc-800 text-lg md:text-2xl transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out"
           >
             <p>Let's Go</p>
             <div className="text-xl p-2 rounded-4xl bg-white text-black self-end heroButton">
@@ -284,10 +293,12 @@ function App() {
 
         {/* About Section*/}
         <div className="w-full flex flex-col min-h-screen" id="about">
-          <p className="text-4xl font-light">About Me</p>
-          <p className="leading-30 text-8xl font-semibold">Who Am I?</p>
+          <p className="text-xl md:text-2xl lg:text-4xl font-light">About Me</p>
+          <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold">
+            Who Am I?
+          </p>
           <div className="p-4">
-            <p className="text-2xl font-light">
+            <p className="text-lg md:text-xl lg:text-2xl font-light">
               Hello! My name is Wen Zhe, or you could also call me Nathan. I
               have been self-teaching all things programming since I was 18,
               which is in 2024. I started off by learning C++ since I originally
@@ -303,30 +314,34 @@ function App() {
             </p>
           </div>
 
-          <div className="text-start mt-10">
-            <p className="leading-30 text-6xl font-semibold">Education</p>
+          <div className="text-start mt-5 md:mt-10">
+            <p className="leading-15 md:leading-30 text-4xl md:text-6xl font-semibold">
+              Education
+            </p>
           </div>
 
           {/* Education Timeline */}
-          <div className="flex flex-wrap gap-10">
+          <div className="flex flex-wrap gap-5 md:gap-10">
             <div className="flex-1 border-x-2 border-white  flex flex-col p-4 rounded-2xl hover:border-zinc-600 transition-colors ease-in-out duration-100">
-              <h1 className="text-3xl font-semibold">Sunway University</h1>
-              <p className="leading-15 text-2xl font-medium">
+              <h1 className="text-2xl md:text-3xl font-semibold">
+                Sunway University
+              </h1>
+              <p className="leading-10 md:leading-15 text-xl md:text-2xl font-medium">
                 Bachelor of Science (Honours) in Computer Science
               </p>
-              <p className="leading-5 text-2xl font-light text-zinc-500">
+              <p className="leading-5 text-xl md:text-2xl font-light text-zinc-500">
                 September 2025 - September 2028
               </p>
             </div>
 
             <div className="flex-1 border-x-2 border-white flex flex-col p-4 rounded-2xl  hover:border-zinc-600 transition-colors ease-in-out duration-100">
-              <h1 className="text-3xl font-semibold">
+              <h1 className="text-2xl md:text-3xl  font-semibold">
                 Asia Pacific University of Technology and Innovation
               </h1>
-              <p className="leading-15 text-2xl font-medium">
+              <p className="leading-10 md:leading-15 text-xl md:text-2xl font-medium">
                 Foundation in Computing and Technology
               </p>
-              <p className="leading-5 text-2xl font-light text-zinc-500">
+              <p className="leading-5 text-xl md:text-2xl font-light text-zinc-500">
                 July 2024 - May 2025
               </p>
             </div>

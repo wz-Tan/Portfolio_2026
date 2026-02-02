@@ -218,7 +218,7 @@ function App() {
   return (
     <main className="bg-zinc-900 w-screen overflow-clip min-h-full zalando-sans tracking-tight text-white ">
       {/* Nav */}
-      <nav className="w-full p-8 md:px-50 flex flex-col lg:flex-row items-center lg:justify-between text-xl md:text-2xl absolute top-0 ">
+      <nav className="w-full p-8 md:px-50 flex flex-col lg:flex-row items-center lg:justify-between text-lg md:text-2xl absolute top-0 ">
         <button
           className="hidden md:block hover:cursor-pointer"
           onClick={() => scrollToHero()}
@@ -262,14 +262,14 @@ function App() {
       </nav>
 
       {/* Main Container */}
-      <div className="p-4 px-20 w-full min-h-screen">
+      <div className="p-4 px-5 md:px-20 w-full min-h-screen">
         {/* Hero */}
         <div
           id="hero"
           className="w-full items-center justify-center flex flex-col min-h-screen"
         >
           <ul className="text-4xl md:text-6xl lg:text-8xl flex text-center justify-center font-semibold h-12 md:h-18 lg:h-24 relative w-full">
-            <li className="heroCaption absolute md:top-0">{headers[0]}</li>
+            <li className="heroCaption absolute">{headers[0]}</li>
             <li className="heroCaption absolute -top-10 sm:top-0">
               {headers[1]}
             </li>
@@ -277,7 +277,7 @@ function App() {
               {headers[2]}
             </li>
           </ul>
-          <p className="leading-5 md:leading-10 lg:leading-20 text-xl md:text-2xl lg:text-4xl text-zinc-500">
+          <p className="leading-5 md:leading-10 lg:leading-20 text-lg md:text-2xl lg:text-4xl text-zinc-500">
             Hi, I am Wen Zhe.
           </p>
           <button
@@ -285,7 +285,7 @@ function App() {
             className="group flex items-center gap-4 mt-4 rounded-4xl py-1 md:py-2 pl-6 bg-zinc-800 text-lg md:text-2xl transition-colors hover:cursor-pointer hover:text-black hover:bg-white duration-150 ease-in-out"
           >
             <p>Let's Go</p>
-            <div className="text-xl p-2 rounded-4xl bg-white text-black self-end heroButton">
+            <div className="text-lg p-2 rounded-4xl bg-white text-black self-end heroButton">
               <FaArrowRightLong />
             </div>
           </button>
@@ -293,12 +293,12 @@ function App() {
 
         {/* About Section*/}
         <div className="w-full flex flex-col min-h-screen" id="about">
-          <p className="text-xl md:text-2xl lg:text-4xl font-light">About Me</p>
+          <p className="text-lg md:text-2xl lg:text-4xl font-light">About Me</p>
           <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold">
             Who Am I?
           </p>
           <div className="p-4">
-            <p className="text-lg md:text-xl lg:text-2xl font-light">
+            <p className="text-md md:text-lg lg:text-2xl font-light">
               Hello! My name is Wen Zhe, or you could also call me Nathan. I
               have been self-teaching all things programming since I was 18,
               which is in 2024. I started off by learning C++ since I originally
@@ -326,10 +326,10 @@ function App() {
               <h1 className="text-2xl md:text-3xl font-semibold">
                 Sunway University
               </h1>
-              <p className="py-2 md:py-4 text-xl md:text-2xl font-medium">
+              <p className="py-2 md:py-4 text-lg md:text-2xl font-medium">
                 Bachelor of Science (Honours) in Computer Science
               </p>
-              <p className="leading-5 text-xl md:text-2xl font-light text-zinc-500">
+              <p className="leading-5 text-lg md:text-2xl font-light text-zinc-500">
                 September 2025 - September 2028
               </p>
             </div>
@@ -338,10 +338,10 @@ function App() {
               <h1 className="text-2xl md:text-3xl  font-semibold">
                 Asia Pacific University of Technology and Innovation
               </h1>
-              <p className="py-2 md:py-4 text-xl md:text-2xl font-medium">
+              <p className="py-2 md:py-4 text-lg md:text-2xl font-medium">
                 Foundation in Computing and Technology
               </p>
-              <p className="leading-5 text-xl md:text-2xl font-light text-zinc-500">
+              <p className="leading-5 text-lg md:text-2xl font-light text-zinc-500">
                 July 2024 - May 2025
               </p>
             </div>
@@ -351,7 +351,7 @@ function App() {
             <p className="leading-10 md:leading-20 lg:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold text-center">
               My Interests
             </p>
-            <p className="text-center text-xl md:text-2xl lg:text-4xl font-light">
+            <p className="text-center text-lg md:text-2xl lg:text-4xl font-light">
               There has to be more in life than coding, <em>right?</em>
             </p>
 
@@ -362,7 +362,7 @@ function App() {
                   <p className="text-2xl md:text-3xl font-semibold">
                     Artists I've Been into Lately
                   </p>
-                  <p className="leading-8 md:leading-10 text-xl md:text-2xl font-light">
+                  <p className="leading-8 md:leading-10 text-lg md:text-2xl font-light">
                     I mainly listen to Indie, sometimes C-Pop or Hip Hop.
                   </p>
 
@@ -380,7 +380,7 @@ function App() {
                         target="_blank"
                       >
                         <div className="flex flex-row items-center justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
-                          <p className="text-xl md:text-2xl font-light text-center lg:text-start">
+                          <p className="text-lg md:text-2xl font-light text-center lg:text-start">
                             Malcolm Todd
                           </p>
                           <img
@@ -403,7 +403,7 @@ function App() {
                         target="_blank"
                       >
                         <div className="flex flex-row items-center justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
-                          <p className="text-xl md:text-2xl font-light text-center lg:text-start">
+                          <p className="text-lg md:text-2xl font-light text-center lg:text-start">
                             Men I Trust
                           </p>
                           <img
@@ -426,7 +426,7 @@ function App() {
                         target="_blank"
                       >
                         <div className="flex flex-row items-center justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
-                          <p className="text-xl md:text-2xl font-light text-center lg:text-start">
+                          <p className="text-lg md:text-2xl font-light text-center lg:text-start">
                             Oasis
                           </p>
                           <img
@@ -443,7 +443,7 @@ function App() {
                   <p className="text-2xl md:text-3xl font-semibold">
                     I Love Reading
                   </p>
-                  <p className="leading-8 md:leading-10 text-xl md:text-2xl font-light">
+                  <p className="leading-8 md:leading-10 text-lg md:text-2xl font-light">
                     It makes me look educated too.
                   </p>
 
@@ -455,10 +455,10 @@ function App() {
                           className="w-full h-full rounded-xl object-cover"
                         />
                       </div>
-                      <p className="text-xl md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
+                      <p className="text-lg md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
                         The Psychology of Money
                       </p>
-                      <p className="text-xl md:text-2xl font-light">
+                      <p className="text-lg md:text-2xl font-light">
                         Morgan Housel
                       </p>
                     </div>
@@ -470,10 +470,10 @@ function App() {
                           className="w-full h-full rounded-xl object-cover"
                         />
                       </div>
-                      <p className="text-xl md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
+                      <p className="text-lg md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
                         The Art of Not Giving a F*ck
                       </p>
-                      <p className="text-xl md:text-2xl font-light">
+                      <p className="text-lg md:text-2xl font-light">
                         Mark Manson
                       </p>
                     </div>
@@ -485,10 +485,10 @@ function App() {
                           className="w-full h-full rounded-xl object-cover"
                         />
                       </div>
-                      <p className="text-xl md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
+                      <p className="text-lg md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
                         Deep Work
                       </p>
-                      <p className="text-xl md:text-2xl font-light">
+                      <p className="text-lg md:text-2xl font-light">
                         Cal Newport
                       </p>
                     </div>
@@ -501,7 +501,7 @@ function App() {
                 <p className="text-2xl md:text-3xl font-semibold">
                   Movies or TV Shows
                 </p>
-                <p className="leading-8 md:leading-10 text-xl md:text-2xl font-light">
+                <p className="leading-8 md:leading-10 text-lg md:text-2xl font-light">
                   Films that made me reflect on myself.
                 </p>
 
@@ -517,7 +517,7 @@ function App() {
                       <p className="text-2xl md:text-3xl font-medium">
                         Neon Genesis Evangelion
                       </p>
-                      <p className="text-lg md:text-xl font-light leading-6">
+                      <p className="text-md md:text-lg font-light leading-6">
                         By deploying a few of high school teenagers to save the
                         world, the series looks into how human interactions
                         cause pain to one another with their own baggages.{" "}
@@ -541,7 +541,7 @@ function App() {
                       <p className="text-2xl md:text-3xl font-medium">
                         (500) Days of Summer
                       </p>
-                      <p className="text-lg md:text-xl font-light leading-6">
+                      <p className="text-md md:text-lg font-light leading-6">
                         My favourite Rom-Com, though it's more of a horror
                         movie. The film practically discusses a dysfunctional
                         relationship between Summer who wasn't willing to
@@ -566,7 +566,7 @@ function App() {
                       <p className="text-2xl md:text-3xl font-medium">
                         House M.D.
                       </p>
-                      <p className="text-lg md:text-xl font-light leading-6">
+                      <p className="text-md md:text-lg font-light leading-6">
                         House M.D. is a show that explores the life of Dr.
                         House, who is a Vicodin addict and struggles with
                         interpersonal relationships due to a fear of
@@ -588,13 +588,13 @@ function App() {
         {/* Projects */}
 
         <div className="w-full flex flex-col mt-15 min-h-screen" id="skills">
-          <p className="text-xl md:text-2xl lg:text-4xl font-light">
+          <p className="text-lg md:text-2xl lg:text-4xl font-light">
             Experiences
           </p>
           <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold">
             Technical Skills
           </p>
-          <p className="p-4 text-lg md:text-xl lg:text-2xl font-light">
+          <p className="p-4 text-md md:text-lg lg:text-2xl font-light">
             My projects are a mix between hobby projects as well as hackathon
             prototypes. In this section, I'll cover the work I've done, tools,
             languages and frameworks I have experience with. I have dabbled in
@@ -716,7 +716,7 @@ function App() {
                     EduServe Business Website
                   </h1>
                   <a
-                    className="text-xl md:text-2xl"
+                    className="text-lg md:text-2xl"
                     href="https://meca-eduserve.com/"
                     target="_blank"
                   >
@@ -724,7 +724,7 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-xl md:text-2xl font-light">
+                <p className="text-lg md:text-2xl font-light">
                   My first freelance work for a friend. Developed the website
                   based off Figma draft given by the designer. Responsive
                   website aimed to increase business outreach and build brand
@@ -758,14 +758,14 @@ function App() {
                     Sui RankUp
                   </h1>
                   <a
-                    className="text-xl md:text-2xl"
+                    className="text-lg md:text-2xl"
                     href="https://devmatch2-ch1ll-guys-prod.vercel.app/"
                     target="_blank"
                   >
                     <FiLink />
                   </a>
                   <a
-                    className="text-xl md:text-2xl"
+                    className="text-lg md:text-2xl"
                     href="https://github.com/wz-Tan/devmatch2_Ch1llGuys"
                     target="_blank"
                   >
@@ -773,7 +773,7 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-xl md:text-2xl font-light">
+                <p className="text-lg md:text-2xl font-light">
                   Web3-Integrated project for DevMatch 2025. An on-chain (SUI)
                   marketplace that levels up assets on NFT purchases and sales.
                   I wrote the smart contracts and integrated the endpoints with
@@ -809,7 +809,7 @@ function App() {
                   </h1>
 
                   <a
-                    className="text-xl md:text-2xl"
+                    className="text-lg md:text-2xl"
                     href="https://github.com/wz-Tan/kitahack_hackathon"
                     target="_blank"
                   >
@@ -817,7 +817,7 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-xl md:text-2xl font-light">
+                <p className="text-lg md:text-2xl font-light">
                   KitaLearn is a project I did for KitaHack 2025, hosted by
                   Google Developer Groups on Campus (GDGOC) Malaysia. I targeted
                   the quality education track for this project. Essentially,
@@ -854,7 +854,7 @@ function App() {
                   </h1>
 
                   <a
-                    className="text-xl md:text-2xl"
+                    className="text-lg md:text-2xl"
                     href="https://github.com/wz-Tan/WakeMeUp"
                     target="_blank"
                   >
@@ -862,7 +862,7 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-xl md:text-2xl font-light">
+                <p className="text-lg md:text-2xl font-light">
                   Location-based alarm written in React Native. Inspiration came
                   from one time I overslept my stop. Provided a great experience
                   for working with backend development and mobile UI design.
@@ -924,9 +924,13 @@ function App() {
         </div>
         {/* Contact Me */}
         <div id="contact" className="w-full flex flex-col h-fit mt-20">
-          <p className="text-xl md:text-2xl lg:text-4xl font-light">Contact Me</p>
-          <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold">Let's Talk!</p>
-          <p className="p-2 text-lg md:text-xl lg:text-2xl font-light">
+          <p className="text-lg md:text-2xl lg:text-4xl font-light">
+            Contact Me
+          </p>
+          <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold">
+            Let's Talk!
+          </p>
+          <p className="p-2 text-md md:text-lg lg:text-2xl font-light">
             I'm open to freelance work as well as job opportunities.
           </p>
 
@@ -938,13 +942,13 @@ function App() {
           >
             <div className="flex flex-col gap-2">
               <label
-                className="leading-8 md:leading-10 text-xl md:text-2xl font-semibold"
+                className="leading-8 md:leading-10 text-lg md:text-2xl font-semibold"
                 htmlFor="name"
               >
                 Your Name
               </label>
               <input
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-xl md:text-2xl font-light focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg md:text-2xl font-light focus:outline-none focus:border-zinc-400"
                 id="name"
                 name="name"
                 type="text"
@@ -955,13 +959,13 @@ function App() {
 
             <div className="flex flex-col gap-2">
               <label
-                className="leading-8 md:leading-10 text-xl md:text-2xl font-semibold"
+                className="leading-8 md:leading-10 text-lg md:text-2xl font-semibold"
                 htmlFor="email"
               >
                 Your Email
               </label>
               <input
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-xl md:text-2xl font-light focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg md:text-2xl font-light focus:outline-none focus:border-zinc-400"
                 id="email"
                 name="email"
                 type="email"
@@ -972,7 +976,7 @@ function App() {
 
             <div className="flex flex-col gap-2">
               <label
-                className="leading-8 md:leading-10 text-xl md:text-2xl font-semibold"
+                className="leading-8 md:leading-10 text-lg md:text-2xl font-semibold"
                 htmlFor="message"
               >
                 Message
@@ -980,7 +984,7 @@ function App() {
               <textarea
                 id="message"
                 name="message"
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-xl md:text-2xl font-light focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-lg md:text-2xl font-light focus:outline-none focus:border-zinc-400"
                 rows={4}
                 placeholder="What's up?"
                 required
@@ -989,7 +993,7 @@ function App() {
 
             <button
               disabled={contactButtonDisabled}
-              className="w-fit flex text-xl md:text-2xl mt-4 items-center text-zinc-200 justify-center gap-4 self-center border-zinc-400 border-2 rounded-4xl p-2 px-6 text-center transition-colors hover:cursor-pointer hover:text-black hover:bg-slate-200 duration-150 ease-in-out"
+              className="w-fit flex text-lg md:text-2xl mt-4 items-center text-zinc-200 justify-center gap-4 self-center border-zinc-400 border-2 rounded-4xl p-2 px-6 text-center transition-colors hover:cursor-pointer hover:text-black hover:bg-slate-200 duration-150 ease-in-out"
             >
               <p className="font-light">{contactButtonMessage[0]}</p>
               <p>{contactButtonMessage[1]}</p>

@@ -904,7 +904,7 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-2xl font-light">
+                <p className="text-lg md:text-2xl font-light">
                   ...The website you're looking at right now :D
                 </p>
                 <div className="flex flex-wrap gap-2 items-start mt-auto py-2">

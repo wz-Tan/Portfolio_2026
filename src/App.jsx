@@ -1006,7 +1006,7 @@ function App() {
               <a href="https://github.com/wz-Tan" target="_blank">
                 <SiGithub />
               </a>
-              <a href="www.linkedin.com/in/wen-zhe-tan" target="_blank">
+              <a href="https://www.linkedin.com/in/wen-zhe-tan" target="_blank">
                 <SiLinkedin />
               </a>
               <a target="_blank" href="mailto:wztan.dev@gmail.com">

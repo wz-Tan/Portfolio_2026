@@ -517,7 +517,7 @@ function App() {
                       <p className="text-2xl md:text-3xl font-medium">
                         Neon Genesis Evangelion
                       </p>
-                      <p className="text-lg md:text-lg md:text-xl font-light leading-6">
+                      <p className="text-lg md:text-xl font-light leading-6">
                         By deploying a few of high school teenagers to save the
                         world, the series looks into how human interactions
                         cause pain to one another with their own baggages.{" "}
@@ -603,7 +603,7 @@ function App() {
           </p>
           {/* Container */}
           <div className="flex flex-col flex-wrap mt-5 px-4 gap-3">
-            <div className="flex flex-1 flex-row flex-wrap gap-2">
+            <div className="flex flex-1 flex-col md:flex-row flex-wrap gap-2">
               <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
                 <div className="flex items-center gap-4 text-2xl md:text-4xl">
                   <FaCode />
@@ -647,7 +647,7 @@ function App() {
             </div>
 
             {/* Second Row */}
-            <div className="flex-1 flex flex-row flex-wrap gap-2">
+            <div className="flex-1 flex flex-col md:flex-row flex-wrap gap-2">
               <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
                 <div className="flex items-center gap-4 text-2xl md:text-4xl">
                   <MdWeb />
@@ -693,17 +693,17 @@ function App() {
 
           {/* Projects */}
           <div className="mt-15" id="projects">
-            <p className="leading-30 text-8xl font-semibold text-center">
+            <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold text-center">
               Work I've Done
             </p>
-            <p className="text-center text-4xl font-light">
+            <p className="text-center text-2xl md:text-4xl font-light">
               My Projects So Far
             </p>
           </div>
 
           <div className="flex flex-col items-center mt-10 gap-4">
             {/* First Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex lg:flex-row flex-col gap-5 md:gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/mecaEduserve.png"
@@ -711,12 +711,12 @@ function App() {
                 />
               </div>
               <div className="flex flex-col flex-3">
-                <div className="flex flex-row text-3xl items-center gap-4">
-                  <h1 className="leading-15 font-semibold">
+                <div className="flex flex-row text-2xl md:text-3xl items-center gap-4">
+                  <h1 className="leading-10 md:leading-15 font-semibold">
                     EduServe Business Website
                   </h1>
                   <a
-                    className="text-2xl"
+                    className="text-xl md:text-2xl"
                     href="https://meca-eduserve.com/"
                     target="_blank"
                   >
@@ -724,20 +724,20 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-2xl font-light">
+                <p className="text-xl md:text-2xl font-light">
                   My first freelance work for a friend. Developed the website
                   based off Figma draft given by the designer. Responsive
                   website aimed to increase business outreach and build brand
                   image.
                 </p>
-                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                <div className="flex flex-wrap gap-2 items-start mt-auto py-2">
                   {eduserve.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150  text-md md:text-lg"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light">{v[1]}</p>
                     </div>
                   ))}
                 </div>
@@ -745,7 +745,7 @@ function App() {
             </div>
 
             {/* Second Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex lg:flex-row flex-col gap-5 md:gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/suiRankup.png"
@@ -753,17 +753,19 @@ function App() {
                 />
               </div>
               <div className="flex flex-col flex-3">
-                <div className="flex flex-row text-3xl items-center gap-4">
-                  <h1 className="leading-15 font-semibold">Sui RankUp</h1>
+                <div className="flex flex-row text-2xl md:text-3xl items-center gap-4">
+                  <h1 className="leading-10 md:leading-15 font-semibold">
+                    Sui RankUp
+                  </h1>
                   <a
-                    className="text-2xl"
+                    className="text-xl md:text-2xl"
                     href="https://devmatch2-ch1ll-guys-prod.vercel.app/"
                     target="_blank"
                   >
                     <FiLink />
                   </a>
                   <a
-                    className="text-2xl"
+                    className="text-xl md:text-2xl"
                     href="https://github.com/wz-Tan/devmatch2_Ch1llGuys"
                     target="_blank"
                   >
@@ -771,7 +773,7 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-2xl font-light">
+                <p className="text-xl md:text-2xl font-light">
                   Web3-Integrated project for DevMatch 2025. An on-chain (SUI)
                   marketplace that levels up assets on NFT purchases and sales.
                   I wrote the smart contracts and integrated the endpoints with
@@ -779,21 +781,21 @@ function App() {
                   supports connecting with Slush wallets and minting your own
                   NFTs. My favourite hackathon yet.
                 </p>
-                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                <div className="flex flex-wrap gap-2 items-start mt-auto py-2">
                   {suiRankup.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150  text-md md:text-lg"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light">{v[1]}</p>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
             {/* Third Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex lg:flex-row flex-col gap-5 md:gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/kitalearn.png"
@@ -801,11 +803,13 @@ function App() {
                 />
               </div>
               <div className="flex flex-col flex-3">
-                <div className="flex flex-row text-3xl items-center gap-4">
-                  <h1 className="leading-15 font-semibold">KitaLearn</h1>
+                <div className="flex flex-row text-2xl md:text-3xl items-center gap-4">
+                  <h1 className="leading-10 md:leading-15 font-semibold">
+                    KitaLearn
+                  </h1>
 
                   <a
-                    className="text-2xl"
+                    className="text-xl md:text-2xl"
                     href="https://github.com/wz-Tan/kitahack_hackathon"
                     target="_blank"
                   >
@@ -813,7 +817,7 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-2xl font-light">
+                <p className="text-xl md:text-2xl font-light">
                   KitaLearn is a project I did for KitaHack 2025, hosted by
                   Google Developer Groups on Campus (GDGOC) Malaysia. I targeted
                   the quality education track for this project. Essentially,
@@ -821,14 +825,14 @@ function App() {
                   generating a relevant syllabus based on the user's age and
                   country via Gemini API.
                 </p>
-                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                <div className="flex flex-wrap gap-2 items-start mt-auto py-2">
                   {kitalearn.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150  text-md md:text-lg"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light">{v[1]}</p>
                     </div>
                   ))}
                 </div>
@@ -836,7 +840,7 @@ function App() {
             </div>
 
             {/* Fourth Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex lg:flex-row flex-col gap-5 md:gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/wakeMeUp.png"
@@ -844,11 +848,13 @@ function App() {
                 />
               </div>
               <div className="flex flex-col flex-3">
-                <div className="flex flex-row text-3xl items-center gap-4">
-                  <h1 className="leading-15 font-semibold">WakeMeUp</h1>
+                <div className="flex flex-row text-2xl md:text-3xl items-center gap-4">
+                  <h1 className="leading-10 md:leading-15 font-semibold">
+                    WakeMeUp
+                  </h1>
 
                   <a
-                    className="text-2xl"
+                    className="text-xl md:text-2xl"
                     href="https://github.com/wz-Tan/WakeMeUp"
                     target="_blank"
                   >
@@ -856,19 +862,19 @@ function App() {
                   </a>
                 </div>
 
-                <p className="text-2xl font-light">
+                <p className="text-xl md:text-2xl font-light">
                   Location-based alarm written in React Native. Inspiration came
                   from one time I overslept my stop. Provided a great experience
                   for working with backend development and mobile UI design.
                 </p>
-                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                <div className="flex flex-wrap gap-2 items-start mt-auto py-2">
                   {wakemeup.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="text-md md:text-lg  flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150 "
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light">{v[1]}</p>
                     </div>
                   ))}
                 </div>
@@ -876,7 +882,7 @@ function App() {
             </div>
 
             {/* Fifth Project */}
-            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
+            <div className="bg-zinc-800 p-4 px-4 rounded-xl w-full flex lg:flex-row flex-col gap-5 md:gap-10 border-2 border-zinc-500 hover:bg-zinc-700 transition-colors duration-100">
               <div className="flex-1 aspect-video">
                 <img
                   src="/portfolio.png"
@@ -884,8 +890,8 @@ function App() {
                 />
               </div>
               <div className="flex flex-col flex-3">
-                <div className="flex flex-row text-3xl items-center gap-4">
-                  <h1 className="leading-15 font-semibold">
+                <div className="flex flex-row text-2xl md:text-3xl items-center gap-4">
+                  <h1 className="leading-10 md:leading-15 font-semibold">
                     Portfolio Website
                   </h1>
 
@@ -901,14 +907,14 @@ function App() {
                 <p className="text-2xl font-light">
                   ...The website you're looking at right now :D
                 </p>
-                <div className="flex flex-wrap gap-2 items-start mt-auto">
+                <div className="flex flex-wrap gap-2 items-start mt-auto py-2">
                   {portfolio.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150  text-md md:text-lg"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light">{v[1]}</p>
                     </div>
                   ))}
                 </div>
@@ -918,9 +924,9 @@ function App() {
         </div>
         {/* Contact Me */}
         <div id="contact" className="w-full flex flex-col h-fit mt-20">
-          <p className="text-4xl font-light">Contact Me</p>
-          <p className="leading-30 text-8xl font-semibold">Let's Talk!</p>
-          <p className="p-2 text-2xl font-light">
+          <p className="text-xl md:text-2xl lg:text-4xl font-light">Contact Me</p>
+          <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold">Let's Talk!</p>
+          <p className="p-2 text-lg md:text-xl lg:text-2xl font-light">
             I'm open to freelance work as well as job opportunities.
           </p>
 
@@ -932,13 +938,13 @@ function App() {
           >
             <div className="flex flex-col gap-2">
               <label
-                className="leading-10 text-2xl font-semibold"
+                className="leading-8 md:leading-10 text-xl md:text-2xl font-semibold"
                 htmlFor="name"
               >
                 Your Name
               </label>
               <input
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-2xl font-light focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-xl md:text-2xl font-light focus:outline-none focus:border-zinc-400"
                 id="name"
                 name="name"
                 type="text"
@@ -949,13 +955,13 @@ function App() {
 
             <div className="flex flex-col gap-2">
               <label
-                className="leading-10 text-2xl font-semibold"
+                className="leading-8 md:leading-10 text-xl md:text-2xl font-semibold"
                 htmlFor="email"
               >
                 Your Email
               </label>
               <input
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-2xl font-light  focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-xl md:text-2xl font-light focus:outline-none focus:border-zinc-400"
                 id="email"
                 name="email"
                 type="email"
@@ -966,7 +972,7 @@ function App() {
 
             <div className="flex flex-col gap-2">
               <label
-                className="leading-10 text-2xl font-semibold"
+                className="leading-8 md:leading-10 text-xl md:text-2xl font-semibold"
                 htmlFor="message"
               >
                 Message
@@ -974,7 +980,7 @@ function App() {
               <textarea
                 id="message"
                 name="message"
-                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-2xl font-light  focus:outline-none focus:border-zinc-400"
+                className="border-2 border-zinc-600 rounded-xl p-2 px-4 text-xl md:text-2xl font-light focus:outline-none focus:border-zinc-400"
                 rows={4}
                 placeholder="What's up?"
                 required
@@ -983,16 +989,16 @@ function App() {
 
             <button
               disabled={contactButtonDisabled}
-              className="w-fit flex mt-4 items-center text-zinc-200 justify-center gap-4 self-center border-zinc-400 border-2 rounded-4xl p-2 px-6 text-center transition-colors hover:cursor-pointer hover:text-black hover:bg-slate-200 duration-150 ease-in-out"
+              className="w-fit flex text-xl md:text-2xl mt-4 items-center text-zinc-200 justify-center gap-4 self-center border-zinc-400 border-2 rounded-4xl p-2 px-6 text-center transition-colors hover:cursor-pointer hover:text-black hover:bg-slate-200 duration-150 ease-in-out"
             >
-              <p className="text-2xl font-light">{contactButtonMessage[0]}</p>
-              <p className="text-2xl">{contactButtonMessage[1]}</p>
+              <p className="font-light">{contactButtonMessage[0]}</p>
+              <p>{contactButtonMessage[1]}</p>
             </button>
           </form>
 
           {/* Footer */}
-          <div className="flex items-center px-4 mt-30 mb-10">
-            <div className="flex-1 flex flex-row gap-4 text-4xl">
+          <div className="flex flex-col md:flex-row items-center px-4 mt-30 mb-10 gap-4 md:gap-0">
+            <div className="flex-1 flex flex-row gap-4 text-2xl md:text-4xl">
               <a href="https://github.com/wz-Tan" target="_blank">
                 <SiGithub />
               </a>
@@ -1008,12 +1014,12 @@ function App() {
               className="flex-1 hover:cursor-pointer"
               onClick={() => scrollToHero()}
             >
-              <p className="text-3xl font-light text-center text-zinc-600">
+              <p className="text-2xl md:text-3xl font-light text-center text-zinc-600">
                 Back to Top
               </p>
             </button>
 
-            <div className="flex-1 flex flex-row gap-4 text-4xl justify-end items-center">
+            <div className="flex-1 flex flex-row gap-4 text-2xl md:text-4xl justify-end items-center">
               <FaRegCopyright />
               <p className="font-semibold">Tan Wen Zhe, 2026</p>
             </div>

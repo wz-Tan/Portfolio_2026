@@ -321,12 +321,12 @@ function App() {
           </div>
 
           {/* Education Timeline */}
-          <div className="flex flex-wrap gap-5 md:gap-10">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-5 md:gap-10">
             <div className="flex-1 border-x-2 border-white  flex flex-col p-4 rounded-2xl hover:border-zinc-600 transition-colors ease-in-out duration-100">
               <h1 className="text-2xl md:text-3xl font-semibold">
                 Sunway University
               </h1>
-              <p className="leading-10 md:leading-15 text-xl md:text-2xl font-medium">
+              <p className="py-2 md:py-4 text-xl md:text-2xl font-medium">
                 Bachelor of Science (Honours) in Computer Science
               </p>
               <p className="leading-5 text-xl md:text-2xl font-light text-zinc-500">
@@ -338,7 +338,7 @@ function App() {
               <h1 className="text-2xl md:text-3xl  font-semibold">
                 Asia Pacific University of Technology and Innovation
               </h1>
-              <p className="leading-10 md:leading-15 text-xl md:text-2xl font-medium">
+              <p className="py-2 md:py-4 text-xl md:text-2xl font-medium">
                 Foundation in Computing and Technology
               </p>
               <p className="leading-5 text-xl md:text-2xl font-light text-zinc-500">
@@ -348,10 +348,10 @@ function App() {
           </div>
 
           <div className="mt-15">
-            <p className="leading-30 text-8xl font-semibold text-center">
+            <p className="leading-10 md:leading-20 lg:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold text-center">
               My Interests
             </p>
-            <p className="text-center text-4xl font-light">
+            <p className="text-center text-xl md:text-2xl lg:text-4xl font-light">
               There has to be more in life than coding, <em>right?</em>
             </p>
 
@@ -359,10 +359,10 @@ function App() {
             <div className="flex flex-wrap gap-2.5 mt-8">
               <div className="flex-2 flex flex-col gap-3">
                 <div className="rounded-xl bg-zinc-800 p-4 px-6">
-                  <p className="text-3xl font-semibold">
+                  <p className="text-2xl md:text-3xl font-semibold">
                     Artists I've Been into Lately
                   </p>
-                  <p className="leading-10 text-2xl font-light">
+                  <p className="leading-8 md:leading-10 text-xl md:text-2xl font-light">
                     I mainly listen to Indie, sometimes C-Pop or Hip Hop.
                   </p>
 
@@ -379,10 +379,12 @@ function App() {
                         href="https://open.spotify.com/artist/7eKkW1zo5uzW8kUntiiBvz?si=gs3p9TeMSeGtAjlY2cFyOg"
                         target="_blank"
                       >
-                        <div className="flex items-center justify-center gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
-                          <p className="text-2xl font-light">Malcolm Todd</p>
+                        <div className="flex flex-col lg:flex-row items-center lg:justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 lg:pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                          <p className="text-xl md:text-2xl font-light text-center lg:text-start">
+                            Malcolm Todd
+                          </p>
                           <img
-                            className="w-12 aspect-square self-end"
+                            className="w-12 aspect-square lg:self-end"
                             src="/spotify.svg"
                           />
                         </div>
@@ -400,10 +402,12 @@ function App() {
                         href="https://open.spotify.com/artist/3zmfs9cQwzJl575W1ZYXeT?si=wmDpwCzNTb6UzRF2d-nylQ"
                         target="_blank"
                       >
-                        <div className="flex items-center justify-center gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
-                          <p className="text-2xl font-light">Men I Trust</p>
+                        <div className="flex flex-col lg:flex-row items-center lg:justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 lg:pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                          <p className="text-xl md:text-2xl font-light text-center lg:text-start">
+                            Men I Trust
+                          </p>
                           <img
-                            className="w-12 aspect-square self-end"
+                            className="w-12 aspect-square lg:self-end"
                             src="/spotify.svg"
                           />
                         </div>
@@ -421,10 +425,12 @@ function App() {
                         href="https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4?si=x2lWVhKlSJSN4h4Lm49YdA"
                         target="_blank"
                       >
-                        <div className="flex items-center justify-center gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
-                          <p className="text-2xl font-light">Oasis</p>
+                        <div className="flex flex-col lg:flex-row items-center lg:justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 lg:pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                          <p className="text-xl md:text-2xl font-light text-center lg:text-start">
+                            Oasis
+                          </p>
                           <img
-                            className="w-12 aspect-square self-end"
+                            className="w-12 aspect-square lg:self-end"
                             src="/spotify.svg"
                           />
                         </div>
@@ -434,8 +440,10 @@ function App() {
                 </div>
                 {/* Books */}
                 <div className="rounded-md bg-zinc-800 p-4 px-6">
-                  <p className="text-3xl font-semibold ">I Love Reading</p>
-                  <p className="leading-10 text-2xl font-light">
+                  <p className="text-2xl md:text-3xl font-semibold">
+                    I Love Reading
+                  </p>
+                  <p className="leading-8 md:leading-10 text-xl md:text-2xl font-light">
                     It makes me look educated too.
                   </p>
 
@@ -447,23 +455,27 @@ function App() {
                           className="w-full h-full rounded-xl object-cover"
                         />
                       </div>
-                      <p className="text-2xl font-semibold mt-2 leading-10">
+                      <p className="text-xl md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
                         The Psychology of Money
                       </p>
-                      <p className="text-2xl font-light">Morgan Housel</p>
+                      <p className="text-xl md:text-2xl font-light">
+                        Morgan Housel
+                      </p>
                     </div>
 
-                    <div className="flex  flex-col flex-1 text-center">
+                    <div className="flex flex-col flex-1 text-center">
                       <div className="w-full aspect-square">
                         <img
                           src="/artOfNotGivingAF.jpg"
                           className="w-full h-full rounded-xl object-cover"
                         />
                       </div>
-                      <p className="text-2xl font-semibold mt-2 leading-10">
+                      <p className="text-xl md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
                         The Art of Not Giving a F*ck
                       </p>
-                      <p className="text-2xl font-light">Mark Manson</p>
+                      <p className="text-xl md:text-2xl font-light">
+                        Mark Manson
+                      </p>
                     </div>
 
                     <div className="flex flex-col flex-1 text-center">
@@ -473,10 +485,12 @@ function App() {
                           className="w-full h-full rounded-xl object-cover"
                         />
                       </div>
-                      <p className="text-2xl font-semibold mt-2 leading-10">
+                      <p className="text-xl md:text-2xl font-semibold mt-2 leading-8 md:leading-10">
                         Deep Work
                       </p>
-                      <p className="text-2xl font-light">Cal Newport</p>
+                      <p className="text-xl md:text-2xl font-light">
+                        Cal Newport
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -570,9 +584,13 @@ function App() {
         {/* Projects */}
 
         <div className="w-full flex flex-col mt-15 min-h-screen" id="skills">
-          <p className="text-4xl font-light">Experiences</p>
-          <p className="leading-30 text-8xl font-semibold">Technical Skills</p>
-          <p className="p-4 text-2xl font-light">
+          <p className="text-xl md:text-2xl lg:text-4xl font-light">
+            Experiences
+          </p>
+          <p className="leading-12 md:leading-30 text-4xl md:text-6xl lg:text-8xl font-semibold">
+            Technical Skills
+          </p>
+          <p className="p-4 text-lg md:text-xl lg:text-2xl font-light">
             My projects are a mix between hobby projects as well as hackathon
             prototypes. In this section, I'll cover the work I've done, tools,
             languages and frameworks I have experience with. I have dabbled in

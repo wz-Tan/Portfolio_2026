@@ -356,7 +356,7 @@ function App() {
             </p>
 
             {/* Aesthetic Container */}
-            <div className="flex flex-wrap gap-2.5 mt-8">
+            <div className="flex flex-col lg:flex-row flex-wrap gap-2.5 mt-8">
               <div className="flex-2 flex flex-col gap-3">
                 <div className="rounded-xl bg-zinc-800 p-4 px-6">
                   <p className="text-2xl md:text-3xl font-semibold">
@@ -366,9 +366,9 @@ function App() {
                     I mainly listen to Indie, sometimes C-Pop or Hip Hop.
                   </p>
 
-                  <div className="flex gap-8 mt-2 flex-wrap">
+                  <div className="flex flex-col md:flex-row gap-8 mt-2 flex-wrap">
                     <div className="flex flex-col gap-5 flex-1">
-                      <div className="w-full aspect-square">
+                      <div className="w-2/3 md:w-full self-center aspect-square">
                         <img
                           className="rounded-md w-full h-full object-cover"
                           src="/malcolmTodd.png"
@@ -379,7 +379,7 @@ function App() {
                         href="https://open.spotify.com/artist/7eKkW1zo5uzW8kUntiiBvz?si=gs3p9TeMSeGtAjlY2cFyOg"
                         target="_blank"
                       >
-                        <div className="flex flex-col lg:flex-row items-center lg:justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 lg:pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                        <div className="flex flex-row items-center justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
                           <p className="text-xl md:text-2xl font-light text-center lg:text-start">
                             Malcolm Todd
                           </p>
@@ -391,7 +391,7 @@ function App() {
                       </a>
                     </div>
                     <div className="flex flex-col gap-5 flex-1">
-                      <div className="w-full aspect-square">
+                      <div className="w-2/3 md:w-full self-center aspect-square">
                         <img
                           className="rounded-md w-full h-full object-cover"
                           src="/menITrust.jpg"
@@ -402,7 +402,7 @@ function App() {
                         href="https://open.spotify.com/artist/3zmfs9cQwzJl575W1ZYXeT?si=wmDpwCzNTb6UzRF2d-nylQ"
                         target="_blank"
                       >
-                        <div className="flex flex-col lg:flex-row items-center lg:justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 lg:pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                        <div className="flex flex-row items-center justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
                           <p className="text-xl md:text-2xl font-light text-center lg:text-start">
                             Men I Trust
                           </p>
@@ -414,7 +414,7 @@ function App() {
                       </a>
                     </div>
                     <div className="flex flex-col gap-5 flex-1">
-                      <div className="w-full aspect-square">
+                      <div className="w-2/3 md:w-full self-center aspect-square">
                         <img
                           className="rounded-md w-full h-full object-cover"
                           src="/oasis.jpg"
@@ -425,7 +425,7 @@ function App() {
                         href="https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4?si=x2lWVhKlSJSN4h4Lm49YdA"
                         target="_blank"
                       >
-                        <div className="flex flex-col lg:flex-row items-center lg:justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 lg:pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
+                        <div className="flex flex-row items-center justify-center md:gap-2 bg-zinc-700 rounded-2xl py-1 pl-5 hover:bg-black hover:cursor-pointer transition duration-200">
                           <p className="text-xl md:text-2xl font-light text-center lg:text-start">
                             Oasis
                           </p>
@@ -447,9 +447,9 @@ function App() {
                     It makes me look educated too.
                   </p>
 
-                  <div className="flex flex-row gap-4 mt-2">
+                  <div className="flex flex-col md:flex-row gap-4 mt-2">
                     <div className="flex flex-col flex-1  text-center">
-                      <div className="w-full aspect-square">
+                      <div className="w-2/3 md:w-full self-center aspect-square">
                         <img
                           src="/psychologyOfmoney.jpg"
                           className="w-full h-full rounded-xl object-cover"
@@ -464,7 +464,7 @@ function App() {
                     </div>
 
                     <div className="flex flex-col flex-1 text-center">
-                      <div className="w-full aspect-square">
+                      <div className="w-2/3 md:w-full self-center aspect-square">
                         <img
                           src="/artOfNotGivingAF.jpg"
                           className="w-full h-full rounded-xl object-cover"
@@ -479,7 +479,7 @@ function App() {
                     </div>
 
                     <div className="flex flex-col flex-1 text-center">
-                      <div className="w-full aspect-square">
+                      <div className="w-2/3 md:w-full self-center aspect-square">
                         <img
                           src="/deepWork.jpeg"
                           className="w-full h-full rounded-xl object-cover"
@@ -498,13 +498,15 @@ function App() {
 
               {/* Movies */}
               <div className="rounded-xl bg-zinc-800 p-4 px-6 flex-1">
-                <p className="text-3xl font-semibold">Movies or TV Shows</p>
-                <p className="leading-10 text-2xl font-light">
+                <p className="text-2xl md:text-3xl font-semibold">
+                  Movies or TV Shows
+                </p>
+                <p className="leading-8 md:leading-10 text-xl md:text-2xl font-light">
                   Films that made me reflect on myself.
                 </p>
 
                 <div className="flex flex-col mt-2 gap-8">
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex-1">
                       <img
                         src="/nge.jpeg"
@@ -512,10 +514,10 @@ function App() {
                       />
                     </div>
                     <div className="flex-2 flex-col flex gap-2">
-                      <p className="text-3xl font-medium">
+                      <p className="text-2xl md:text-3xl font-medium">
                         Neon Genesis Evangelion
                       </p>
-                      <p className="text-xl font-light leading-6 ">
+                      <p className="text-lg md:text-lg md:text-xl font-light leading-6">
                         By deploying a few of high school teenagers to save the
                         world, the series looks into how human interactions
                         cause pain to one another with their own baggages.{" "}
@@ -528,7 +530,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex-1">
                       <img
                         src="/500dos.jpg"
@@ -536,10 +538,10 @@ function App() {
                       />
                     </div>
                     <div className="flex-2 flex-col flex gap-2">
-                      <p className="text-3xl font-medium">
+                      <p className="text-2xl md:text-3xl font-medium">
                         (500) Days of Summer
                       </p>
-                      <p className="text-xl font-light leading-6 ">
+                      <p className="text-lg md:text-xl font-light leading-6">
                         My favourite Rom-Com, though it's more of a horror
                         movie. The film practically discusses a dysfunctional
                         relationship between Summer who wasn't willing to
@@ -553,7 +555,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex-1">
                       <img
                         src="/houseMd.jpg"
@@ -561,8 +563,10 @@ function App() {
                       />
                     </div>
                     <div className="flex-2 flex-col flex gap-2">
-                      <p className="text-3xl font-medium">House M.D.</p>
-                      <p className="text-xl font-light leading-6 ">
+                      <p className="text-2xl md:text-3xl font-medium">
+                        House M.D.
+                      </p>
+                      <p className="text-lg md:text-xl font-light leading-6">
                         House M.D. is a show that explores the life of Dr.
                         House, who is a Vicodin addict and struggles with
                         interpersonal relationships due to a fear of
@@ -601,9 +605,9 @@ function App() {
           <div className="flex flex-col flex-wrap mt-5 px-4 gap-3">
             <div className="flex flex-1 flex-row flex-wrap gap-2">
               <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
-                <div className="flex items-center gap-4">
-                  <FaCode className="text-4xl" />
-                  <h1 className="leading-10 text-4xl font-semibold">
+                <div className="flex items-center gap-4 text-2xl md:text-4xl">
+                  <FaCode />
+                  <h1 className="leading-8 md:leading-10 font-semibold">
                     Languages
                   </h1>
                 </div>
@@ -612,28 +616,30 @@ function App() {
                   {languages.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex items-center text-md md:text-lg gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light ">{v[1]}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
-                <div className="flex items-center gap-4">
-                  <RiToolsLine className="text-4xl" />
-                  <h1 className="leading-10 text-4xl font-semibold">Tools</h1>
+                <div className="flex items-center gap-4 text-2xl md:text-4xl">
+                  <RiToolsLine />
+                  <h1 className="leading-8 md:leading-10 font-semibold">
+                    Tools
+                  </h1>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {tools.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex text-md md:text-lg items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p>{v[1]}</p>
                     </div>
                   ))}
                 </div>
@@ -643,9 +649,9 @@ function App() {
             {/* Second Row */}
             <div className="flex-1 flex flex-row flex-wrap gap-2">
               <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
-                <div className="flex items-center gap-4">
-                  <MdWeb className="text-4xl" />
-                  <h1 className="leading-10 text-4xl font-semibold">
+                <div className="flex items-center gap-4 text-2xl md:text-4xl">
+                  <MdWeb />
+                  <h1 className="leading-8 md:leading-10 font-semibold">
                     Web Development
                   </h1>
                 </div>
@@ -654,19 +660,19 @@ function App() {
                   {web.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex items-center text-md md:text-lg gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light ">{v[1]}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="flex flex-col bg-zinc-800 border-2 border-zinc-500 p-4 rounded-xl flex-1 gap-3 ">
-                <div className="flex items-center gap-4">
-                  <PiDeviceMobileSpeakerLight className="text-4xl" />
-                  <h1 className="leading-10 text-4xl font-semibold">
+                <div className="flex items-center gap-4 text-2xl md:text-4xl">
+                  <PiDeviceMobileSpeakerLight />
+                  <h1 className="leading-8 md:leading-10 font-semibold">
                     Mobile App Development
                   </h1>
                 </div>
@@ -674,10 +680,10 @@ function App() {
                   {mobile.map((v, k) => (
                     <div
                       key={k}
-                      className="flex items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
+                      className="flex text-md md:text-lg  items-center gap-2 p-2 px-4 rounded-3xl bg-white/10 border-white h-fit w-fit hover:-translate-y-3 transition duration-150"
                     >
-                      <p className="text-lg ">{v[0]}</p>
-                      <p className="text-lg font-light ">{v[1]}</p>
+                      <p>{v[0]}</p>
+                      <p className="font-light ">{v[1]}</p>
                     </div>
                   ))}
                 </div>

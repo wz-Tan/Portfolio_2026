@@ -3,6 +3,7 @@ import "./App.css";
 import emailjs from "@emailjs/browser";
 import { FaArrowRightLong, FaCode, FaLinux, FaWindows } from "react-icons/fa6";
 import { RiToolsLine } from "react-icons/ri";
+import { Analytics } from "@vercel/analytics/next";
 import {
   SiTypescript,
   SiJavascript,
@@ -217,6 +218,7 @@ function App() {
 
   return (
     <main className="bg-zinc-900 w-screen overflow-clip min-h-full zalando-sans tracking-tight text-white ">
+      <Analytics />
       {/* Nav */}
       <nav className="w-full p-8 md:px-50 flex flex-col lg:flex-row items-center lg:justify-between text-lg md:text-2xl absolute top-0 ">
         <button
